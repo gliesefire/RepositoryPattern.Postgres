@@ -14,8 +14,8 @@
 		<Nullable>enable</Nullable>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<PackageProjectUrl>https://github.com/gliesefire/Repository-UoW-Pattern</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/gliesefire/Repository-UoW-Pattern</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/gliesefire/RepositoryPattern.Postgres</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/gliesefire/RepositoryPattern.Postgres</RepositoryUrl>
 		<PackageTags>UnitOfWork,Repository,Postgres</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReleaseNotes>Bump abstractions version to 2.2.0</PackageReleaseNotes>

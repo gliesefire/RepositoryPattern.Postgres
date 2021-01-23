@@ -72,13 +72,13 @@ namespace RepositoryPattern.Postgres
             return await CreateOpenConnectionAsync();
         }
 
-
         public override async Task<IDbConnection> CreateOpenConnectionAsync()
         {
             if (_connection is null)
             {
                 _logger.LogDebug("Initiating connection");
                 _connection = new NpgsqlConnection(_connectionBuilder.ConnectionString);
+                _connection.Disposed += ConnectionDisposed;
             }
 
             if (_connection.State != ConnectionState.Open)
@@ -90,6 +90,11 @@ namespace RepositoryPattern.Postgres
             return _connection;
         }
 
+        private void ConnectionDisposed(object sender, EventArgs e)
+        {
+            //To avoid opening a disposed connection
+            _connection = null;
+        }
 
         public bool IsDeadlockException(Exception ex)
         {
@@ -105,7 +110,7 @@ namespace RepositoryPattern.Postgres
         bool disposed = false;
 
         // Public implementation of Dispose pattern callable by consumers.
-        public void Dispose()
+        public override void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);

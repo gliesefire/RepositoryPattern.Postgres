@@ -8,8 +8,8 @@
 		<Product>RepositoryPattern.Postgres</Product>
 		<Description>Postgres Implementation of Connection Factory using Npgsql.</Description>
 		<Copyright></Copyright>
-		<Version>2.1.1</Version>
-		<AssemblyVersion>2.1.1.0</AssemblyVersion>
+		<Version>2.1.2</Version>
+		<AssemblyVersion>2.1.2.0</AssemblyVersion>
 		<LangVersion>8.0</LangVersion>
 		<Nullable>enable</Nullable>
 		<IncludeSymbols>true</IncludeSymbols>
@@ -18,12 +18,12 @@
 		<RepositoryUrl>https://github.com/gliesefire/RepositoryPattern.Postgres</RepositoryUrl>
 		<PackageTags>UnitOfWork,Repository,Postgres</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageReleaseNotes>Bump abstractions version to 2.2.0</PackageReleaseNotes>
+		<PackageReleaseNotes>Implement dispose pattern for connection factory</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.11" />
 		<PackageReference Include="Npgsql" Version="4.1.7" />
-		<PackageReference Include="RepositoryPattern.Abstractions" Version="2.2.0" />
+		<PackageReference Include="RepositoryPattern.Abstractions" Version="2.3.0" />
 	</ItemGroup>
 </Project>
